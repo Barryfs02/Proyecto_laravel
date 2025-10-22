@@ -1,66 +1,73 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Sistema de Ventas en Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Descripción del proyecto
+Este es un sistema de ventas web desarrollado con el framework PHP Laravel, diseñado para gestionar de manera eficiente el proceso de compra y venta de productos. El sistema permite a los usuarios (administradores y clientes) realizar diversas tareas, desde la gestión de inventario y pedidos hasta el seguimiento de ventas de manera local.
 
-## About Laravel
+Funcionalidades
+Gestión de productos y categorías.
+Registro y gestión de clientes.
+Procesamiento de pedidos y ventas.
+Reportes de ventas detallados (por producto, por cliente, por periodo).
+Control de inventario en tiempo real.
+Autenticación de usuarios con diferentes roles (administrador y cliente).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Requisitos
+Antes de instalar y ejecutar este proyecto, asegúrate de tener instalados los siguientes componentes en tu entorno de desarrollo:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Servidor web:Apache
+PHP: Versión 8.1 o superior.
+Composer: Gestor de dependencias de PHP.
+Base de datos: MySQL .
+Configuración y ejecución
+Sigue estos pasos para configurar el proyecto en tu máquina local:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1.  Clonar el repositorio:
+    
+    git clone [URL de tu repositorio]
 
-## Learning Laravel
+2.  Instalar dependencias de Composer:
+    
+    composer install
+    
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3.  **Configurar el archivo (.env):
+       Copia el archivo env.explample y renómbralo a (.env).
+        
+        cp .env.example .env
+    
+       Genera la clave de aplicación de Laravel:
+        
+        php artisan key:generate
+    
+       Configura los datos de tu base de datos en el archivo (.env):
+        
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=[nombre_de_tu_base_de_datos]
+        DB_USERNAME=[tu_usuario_de_base_de_datos]
+        DB_PASSWORD=[tu_contraseña_de_base_de_datos]
+    
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+4.  Ejecutar las migraciones y seeders:
+    
+    php artisan migrate --seed
+    
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5.  Instalar dependencias de NPM:
+   
+    npm install
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+6.  Compilar los recursos de frontend:
+    
+    npm run build
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+7.  Iniciar el servidor local de Laravel:
+    
+    php artisan serve
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8.  **Acceder al proyecto:**
+    *   Abre tu navegador y visita la siguiente dirección: `http://127.0.0.1:8000`.
